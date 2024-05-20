@@ -1,2 +1,29 @@
 name: simple-fetch
 run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
+env:
+  PYTHON_VERSION: "3.10"
+  # AUTOMATION_USERNAME: "ETL Automation"
+  # AUTOMATION_EMAIL: "automation@xetdata.com"
+
+on: [push]
+jobs:
+  fetch-save-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python 
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      # - name: Run script
+      #   run: |
+      #     python simple-fetch.py
+      # - name: Commit report
+      #   run: |
+      #     git add data/.
+      #     git commit -m "Updating Data"
+      #     git push 
+  
