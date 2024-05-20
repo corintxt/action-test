@@ -7,6 +7,9 @@ env:
 
 on: [push]
 jobs:
+  job-name:
+    permissions:
+      contents: write
   fetch-save-pipeline:
     runs-on: ubuntu-latest
     steps:
