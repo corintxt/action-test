@@ -32,6 +32,6 @@ jobs:
         run: |
           git config --global user.name $AUTOMATION_USERNAME
           git config --global user.email $AUTOMATION_EMAIL
-          git add data/.
-          git commit -m "Updating data at ${{ env.TIME}}"
+          git add .
+          git commit -m "Updating data"
           git push
