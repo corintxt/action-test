@@ -1,5 +1,6 @@
 name: simple-fetch
-run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
+run-name: Pip install test
+# run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
 env:
   PYTHON_VERSION: "3.10"
   # AUTOMATION_USERNAME: "ETL Automation"
