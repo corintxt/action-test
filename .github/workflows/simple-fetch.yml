@@ -6,12 +6,10 @@ env:
   AUTOMATION_EMAIL: "automation@afp.com"
 
 on: [push]
-jobs:
-  job-name:
-    permissions:
-      contents: write
   fetch-save-pipeline:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
