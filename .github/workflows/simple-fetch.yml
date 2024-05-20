@@ -6,6 +6,7 @@ env:
   AUTOMATION_EMAIL: "automation@afp.com"
 
 on: [push]
+jobs:
   fetch-save-pipeline:
     runs-on: ubuntu-latest
     permissions:
