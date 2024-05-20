@@ -2,8 +2,8 @@ name: simple-fetch
 run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
 env:
   PYTHON_VERSION: "3.10"
-  # AUTOMATION_USERNAME: "ETL Automation"
-  # AUTOMATION_EMAIL: "automation@xetdata.com"
+  # AUTOMATION_USERNAME: "AFP Automation"
+  # AUTOMATION_EMAIL: "automation@afp.com"
 
 on: [push]
 jobs:
@@ -23,9 +23,9 @@ jobs:
       - name: Run script
         run: |
           python simple-fetch.py
-      # - name: Commit report
-      #   run: |
-      #     git add data/.
-      #     git commit -m "Updating data"
-      #     git push 
+      - name: Commit data
+        run: |
+          git add data/.
+          git commit -m "Updating data"
+          git push
   
