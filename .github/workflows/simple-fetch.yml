@@ -1,5 +1,5 @@
 name: simple-fetch
-run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
+run-name: ${{ github.actor }} using GitHub actions to fetch/write
 env:
   PYTHON_VERSION: "3.10"
   AUTOMATION_USERNAME: "AFP Automation"
@@ -25,9 +25,9 @@ jobs:
       - name: Run script
         run: |
           python simple-fetch.py
-      - name: Log date
+      - name: Log last update time
         run: |
-          date > published.txt
+          date > updated.txt
       - name: Commit data
         run: |
           git config --global user.name $AUTOMATION_USERNAME
