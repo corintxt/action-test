@@ -1,6 +1,5 @@
 name: simple-fetch
-run-name: Pip install test
-# run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
+run-name: ${{ github.actor }} is testing GitHub actions to fetch/write
 env:
   PYTHON_VERSION: "3.10"
   # AUTOMATION_USERNAME: "ETL Automation"
@@ -27,6 +26,6 @@ jobs:
       # - name: Commit report
       #   run: |
       #     git add data/.
-      #     git commit -m "Updating Data"
+      #     git commit -m "Updating data"
       #     git push 
   

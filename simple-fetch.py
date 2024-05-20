@@ -19,14 +19,11 @@ if __name__ == "__main__":
 
     data = fetch_test(test_url)
     df = read_csv(data)
-
     print(len(df))
 
-    # save the data in the data directory
+    # Save to the data directory
     directory = os.path.join(os.getcwd(), "data")
     if not os.path.exists(directory):
         os.makedirs(directory)
-
     data_file = os.path.join(directory, "test_data.csv")
-
     df.to_csv(data_file)
